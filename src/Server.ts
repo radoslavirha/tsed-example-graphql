@@ -7,7 +7,9 @@ import compress from "compression";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import methodOverride from "method-override";
-import "./modules/graphql/GraphQLModule";
+import "./v2/modules/graphql/GraphQLModule";
+import "./v1/modules/graphql/GraphQLModule";
+
 
 export const rootDir = __dirname;
 

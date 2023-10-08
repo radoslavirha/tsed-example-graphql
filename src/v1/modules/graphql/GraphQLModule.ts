@@ -7,8 +7,8 @@ import {RecipeResolver} from "./recipes/RecipeResolver";
 @Module({
   imports: [MyDataSource],
   graphql: {
-    default: {
-      path: "/",
+    v1: {
+      path: "/v1/",
       buildSchemaOptions: {
         resolvers: [RecipeResolver]
       }
@@ -22,7 +22,7 @@ export class GraphQLModule {
   private server?: ApolloServer;
 
   public $onReady(): void | Promise<void> {
-    this.server = this.typeGraphQLService.get("default");
+    this.server = this.typeGraphQLService.get("v1");
 
     //  console.log("The server is here:", this.server)
   }
