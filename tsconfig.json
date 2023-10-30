@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
+    "sourceRoot": "src",
     "module": "commonjs",
     "target": "esnext",
     "sourceMap": true,
@@ -30,13 +31,7 @@
     ]
   },
   "include": [
-    "./src/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    "./public",
-    "dist",
-    "test"
+    "src"
   ],
   "linterOptions": {
     "exclude": []
